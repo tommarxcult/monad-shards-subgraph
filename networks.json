@@ -1,0 +1,8 @@
+{
+  "monad-testnet": {
+    "Shard": {
+      "address": "0x32c25465e9f4b198163F474942007AFcE9ceeff9",
+      "startBlock": 13169337
+    }
+  }
+}
