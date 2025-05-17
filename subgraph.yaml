@@ -5,7 +5,7 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum
-    name: Shard
+    name: Molandaks
     network: monad-testnet
     source:
       address: "0x32c25465e9f4b198163F474942007AFcE9ceeff9"
@@ -25,6 +25,7 @@ dataSources:
         - StatusUpdated
         - Transfer
         - WhitelistUpdated
+        - Token 
       abis:
         - name: Shard
           file: ./abis/Shard.json
@@ -48,3 +49,785 @@ dataSources:
         - event: WhitelistUpdated()
           handler: handleWhitelistUpdated
       file: ./src/shard.ts
+
+  - kind: ethereum
+    name: Monadsters
+    network: monad-testnet
+    source:
+      address: "0xdB2164F3e8A842C27580FD0188c04ae150318F36"
+      abi: Shard
+      startBlock: 13673138
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: MonadNomadsNFT
+    network: monad-testnet
+    source:
+      address: "0xDbD9C74F496281E4bb30AB257ba735073F808E7a"
+      abi: Shard
+      startBlock: 13673130
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts    
+
+  - kind: ethereum
+    name: Canz
+    network: monad-testnet
+    source:
+      address: "0xD09327D736249e786220673a8df0aE2F38270735"
+      abi: Shard
+      startBlock: 13673121
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: mopwtf
+    network: monad-testnet
+    source:
+      address: "0xebFF4b706ebB7aa1a6695dbcd67dF2642C803c7C"
+      abi: Shard
+      startBlock: 13673134
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: mutantgents
+    network: monad-testnet
+    source:
+      address: "0xB45a50C8744C9a1b683360CE7e60e11e31D127aC"
+      abi: Shard
+      startBlock: 13673142
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: Coronad
+    network: monad-testnet
+    source:
+      address: "0x565325eF8a36B5e0Aa9A92c69F93A425938382CC"
+      abi: Shard
+      startBlock: 13673116
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: Monadians
+    network: monad-testnet
+    source:
+      address: "0x554D87217F6818C8A47a3C0Ec348c6d888CE5985"
+      abi: Shard
+      startBlock: 13673126
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: Monadverse
+    network: monad-testnet
+    source:
+      address: "0x8794498a491A74b6f2Dbf73E5F5542A054c89653"
+      abi: Shard
+      startBlock: 14484983
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: OmniNads
+    network: monad-testnet
+    source:
+      address: "0x137bf4DcF9b562345001D2b4F3e0F2ed0070Ef4D"
+      abi: Shard
+      startBlock: 14484988
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: CULT
+    network: monad-testnet
+    source:
+      address: "0xBB347c44c7cf878e12D6fD559AaA302Af4e8fb3D"
+      abi: Shard
+      startBlock: 14484977
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: Monadio
+    network: monad-testnet
+    source:
+      address: "0x2A4aef44845777BF9ebef9F4B4BBB264d9585339"
+      abi: Shard
+      startBlock: 15271952
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: Monadoon
+    network: monad-testnet
+    source:
+      address: "0x76C249a8C363C8bA6Ae9d27372c1709A66e668F7"
+      abi: Shard
+      startBlock: 15271957
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: RugRumble
+    network: monad-testnet
+    source:
+      address: "0xD0036D99457d3Ce3a8a2f8416ECF69Ca3bE92Bb7"
+      abi: Shard
+      startBlock: 15271967
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: Mintpadco
+    network: monad-testnet
+    source:
+      address: "0xcB8a648074C1Fea3FFC26dfb10BbCec5E7d3Db1e"
+      abi: Shard
+      startBlock: 15271962
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: LootGO
+    network: monad-testnet
+    source:
+      address: "0xB3aa50F3E543E0A848b4d983F6Fa9F2155b957CE"
+      abi: Shard
+      startBlock: 15271948
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: Salmoheroo
+    network: monad-testnet
+    source:
+      address: "0x0c0c4dCE614e36335255bF54Dcc9279b19BA06B6"
+      abi: Shard
+      startBlock: 15271974
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   
+
+  - kind: ethereum
+    name: Llamao
+    network: monad-testnet
+    source:
+      address: "0x7f7DfeAc59ED41c1c261B6A331Fc3fCA604f4f07"
+      abi: Shard
+      startBlock: 15271943
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - BaseURIUpdated
+        - FinishedMission
+        - MintFeeUpdated
+        - OwnershipTransferred
+        - StatusUpdated
+        - Transfer
+        - WhitelistUpdated
+        - Token 
+      abis:
+        - name: Shard
+          file: ./abis/Shard.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BaseURIUpdated(indexed string)
+          handler: handleBaseURIUpdated
+        - event: FinishedMission(indexed address,indexed string)
+          handler: handleFinishedMission
+        - event: MintFeeUpdated(indexed uint256)
+          handler: handleMintFeeUpdated
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: StatusUpdated(indexed uint8)
+          handler: handleStatusUpdated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: WhitelistUpdated()
+          handler: handleWhitelistUpdated
+      file: ./src/shard.ts   

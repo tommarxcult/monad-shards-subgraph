@@ -20,7 +20,7 @@ type ApprovalForAll @entity(immutable: true) {
 
 type BaseURIUpdated @entity(immutable: true) {
   id: Bytes!
-  _baseTokenURI: String! # string
+  _baseTokenURI: Bytes! 
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
@@ -29,7 +29,7 @@ type BaseURIUpdated @entity(immutable: true) {
 type FinishedMission @entity(immutable: true) {
   id: Bytes!
   _recipient: Bytes! # address
-  _mission_symbol: String! # string
+  _mission_symbol: Bytes! 
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
@@ -76,4 +76,11 @@ type WhitelistUpdated @entity(immutable: true) {
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
+}
+
+type Token @entity {
+  id: ID!
+  contract: Bytes!      # Shard contract address
+  tokenId: BigInt!      # NFT tokenId
+  owner: Bytes!         # owner address
 }

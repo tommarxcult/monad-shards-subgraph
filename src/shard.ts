@@ -18,7 +18,8 @@ import {
   OwnershipTransferred,
   StatusUpdated,
   Transfer,
-  WhitelistUpdated
+  WhitelistUpdated,
+  Token
 } from "../generated/schema"
 
 export function handleApproval(event: ApprovalEvent): void {
@@ -121,19 +122,35 @@ export function handleStatusUpdated(event: StatusUpdatedEvent): void {
 }
 
 export function handleTransfer(event: TransferEvent): void {
-  let entity = new Transfer(
+  let transferEntity = new Transfer(
     event.transaction.hash.concatI32(event.logIndex.toI32())
-  )
-  entity.from = event.params.from
-  entity.to = event.params.to
-  entity.tokenId = event.params.tokenId
+  );
+  transferEntity.from = event.params.from;
+  transferEntity.to = event.params.to;
+  transferEntity.tokenId = event.params.tokenId;
+  transferEntity.blockNumber = event.block.number;
+  transferEntity.blockTimestamp = event.block.timestamp;
+  transferEntity.transactionHash = event.transaction.hash;
+  transferEntity.save();
 
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
+  let contractAddress = event.address.toHexString();
+  let tokenIdString = event.params.tokenId.toString();
+  let tokenEntityId = contractAddress + "-" + tokenIdString;
 
-  entity.save()
+  let token = Token.load(tokenEntityId);
+
+  if (token == null) {
+    token = new Token(tokenEntityId);
+    // On first creation:
+    token.contract = event.address;       // Bytes
+    token.tokenId = event.params.tokenId; // BigInt
+  }
+
+  token.owner = event.params.to;
+
+  token.save();
 }
+
 
 export function handleWhitelistUpdated(event: WhitelistUpdatedEvent): void {
   let entity = new WhitelistUpdated(
